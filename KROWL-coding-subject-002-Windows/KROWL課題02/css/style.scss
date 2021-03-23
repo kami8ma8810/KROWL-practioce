@@ -1,0 +1,210 @@
+/*------------------------------
+デフォルト
+------------------------------*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	min-width: 1000px;
+	color: #333333;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+		"游ゴシック", "Yu Gothic", sans-serif;
+	font-weight: 500;
+	line-height: 2;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+/*------------------------------
+ページ内 共通パーツ
+------------------------------*/
+.section {
+	padding: 100px 0;
+
+	&__title,
+	&__title--white {
+		margin-bottom: 50px;
+		text-align: center;
+		font-size: 3.2rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	&__title--white {
+		color: #ffffff;
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+}
+
+/*------------------------------
+ページヘッダー
+------------------------------*/
+.page-header {
+	position: relative;
+	padding-top: 40%;
+	background: url(../images/bg-main_visual.jpg) center top no-repeat;
+	background-size: cover;
+
+	&__logo {
+		position: absolute;
+		bottom: 60px;
+		left: 60px;
+	}
+}
+
+/*------------------------------
+創造しよう
+------------------------------*/
+.intro {
+	background-color: #fffff3;
+}
+
+/*------------------------------
+「働く」をデザインする
+------------------------------*/
+.work {
+	background: url(../images/bg-content.jpg) center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.work-wrap {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0 auto;
+	padding: 50px;
+	width: 960px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.work-block {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #fffff3;
+
+	&:nth-child(even) {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+	}
+
+	&__image {
+		width: 50%;
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			-o-object-fit: cover;
+			object-fit: cover;
+		}
+	}
+
+	&__inner {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		padding: 40px 20px;
+		width: 50%;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 2rem;
+		line-height: 1.75;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 1.75;
+	}
+}
+
+/*------------------------------
+導入企業様
+------------------------------*/
+.client {
+	background-color: #fffff3;
+
+	>.section__text {
+		margin-bottom: 70px;
+	}
+}
+
+.client-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	margin: 0 auto;
+	width: 780px;
+}
+
+/*------------------------------
+ページフッター
+------------------------------*/
+.page-footer {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+	position: relative;
+	padding: 24px 20px;
+	background-color: #000000;
+
+	&__copyright {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		color: #ffffff;
+		font-size: 1.2rem;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+}
+
+.page-footer__nav ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	li {
+		line-height: 1;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	a {
+		color: #ffffff;
+		font-size: 1.2rem;
+	}
+}
